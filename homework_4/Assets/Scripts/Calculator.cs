@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Schema;
+using Unity.VisualScripting;
 using Unity.VisualScripting.AssemblyQualifiedNameParser;
 using UnityEngine;
 using UnityEngine.UI;
@@ -40,7 +41,7 @@ public class Calculator : MonoBehaviour
     {
         if (firstNumber.text != "" && secondNumber.text != "")
         {
-            result.text = (Double.Parse(firstNumber.text) / Double.Parse(secondNumber.text)).ToString("#.##");
+            result.text = (Double.Parse(firstNumber.text) / Double.Parse(secondNumber.text)).ToString("0.00");
         }
     }
 }
