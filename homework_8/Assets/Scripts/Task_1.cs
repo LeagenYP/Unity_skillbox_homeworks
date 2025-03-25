@@ -13,17 +13,20 @@ public class Task_1 : MonoBehaviour
     private bool goForwardFlag = true;
     private bool goBackFlag = false;
 
+    public GameObject cubeStartPositionMark;
+
     private void Start()
     {
         target = new Vector3[arraySize];
 
-        for (int i = 0; i <= target.Length; i++)
+        for (int i = 0; i < target.Length; i++)
         {
             int x = Random.Range(0, 5);
             int y = Random.Range(0, 5);
             target[i] = new Vector3(x, y);
         }
         transform.position = target[0];
+        cubeStartPositionMark.transform.position = target[0];
     }
 
     void Update()
